@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: sample-app01
-        image: image-registry.openshift-image-registry.svc:5000/piotr-cicd/sample-spring-kotlin:1.3.0
+        image: nginx:stable-alpine3.17
         ports:
         - containerPort: 8080
 ---
