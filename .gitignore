@@ -1,0 +1,5 @@
+.vagrant/
+.vagrant.d/
+output-mybox
+packer_cache
+output-mybox
