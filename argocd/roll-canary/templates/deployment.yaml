@@ -31,7 +31,7 @@ spec:
       initContainers:
         - name: init
           image: busybox:1.28
-          command: ['sh', '-c', "sleep 20"]
+          command: ['sh', '-c', "sleep 30"]
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -82,10 +82,11 @@ spec:
     name: {{ include "ortest-canary.fullname" . }}
   strategy:
     canary:
+      maxUnavailable: 0
       steps:
         - setWeight: 30
         - pause: {}
         - setWeight: 60
-        - pause: {duration: 60s}
+        - pause: {duration: 80s}
         - setWeight: 100
 
