@@ -8,7 +8,7 @@ image:
   repository: argoproj/rollouts-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion. yellow blue
-  tag: "blue"
+  tag: "yellow"
 
 imagePullSecrets: []
 nameOverride: ""
